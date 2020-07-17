@@ -19,8 +19,9 @@ for name_1 in names_1:
             duplicates.append(name_1)
 
 end_time = time.time()
+runtime = end_time - start_time
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
-print (f"runtime: {end_time - start_time} seconds")
+print (f"runtime: {runtime} seconds")
 
 
 
@@ -127,10 +128,16 @@ for name in names_2:
 
 end_time2 = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
-print (f"runtime: {end_time2 - start_time2} seconds")
+runtime2 = end_time2 - start_time2
+print (f"runtime2 : {runtime2} seconds")
 
+# run time 2 minus runtime 1 
+runtime_diff = runtime - runtime2
+print (f"runtime difference: {runtime_diff} seconds faster")
 
-
+runtime_mult = runtime/runtime2
+# runtime 2 divided by runtime 1
+print (f"runtime multiple: {runtime_mult} times faster")
 
 
 # ---------- Stretch Goal -----------

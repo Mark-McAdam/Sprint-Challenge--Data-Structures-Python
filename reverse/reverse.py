@@ -50,12 +50,14 @@ class LinkedList:
         # case 3 
         # node is none, basically tail node will
         # pass none as the next node because its the end
+        # start with how the recursive function will end 
         if node is None:
             return
 
+        # if the recursive did not end if was not none
+        # if next is none then this is the last node the tail
         # If the node is the tail, set it to the head
         # The current tail's get next value will be None
-
         if node.get_next() is None:
             # Set to head
             self.head = node
@@ -73,11 +75,6 @@ class LinkedList:
         # call next node as the current 
         # node as previous 
         self.reverse_list(next_node, node)
-
-
-    
-
-
 
 
 # non recursive version of iterating through

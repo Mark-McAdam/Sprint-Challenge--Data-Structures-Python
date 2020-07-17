@@ -1,7 +1,7 @@
 class RingBuffer:
     """
      RingBuffer has two methods, append and get. 
-
+    
     """
 
     def __init__(self, capacity):
