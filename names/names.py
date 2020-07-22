@@ -144,3 +144,23 @@ print (f"runtime multiple: {runtime_mult} times faster")
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
+
+print()
+start_time3 = time.time()
+
+f = open('names_1.txt', 'r')
+names_1 = f.read().split("\n")  # List containing 10000 names
+f.close()
+
+f = open('names_2.txt', 'r')
+names_2 = f.read().split("\n")  # List containing 10000 names
+f.close()
+
+# Replace the nested for loops below with your improvements
+duplicates_n = [i for i, j in zip(names_1, names_2) if i==j]
+# duplicates_n = set(names_1) & set(names_2)
+
+end_time3 = time.time()
+runtime3 = end_time3 - start_time3
+print (f"{len(duplicates_n)} duplicates:\n\n{duplicates_n}\n\n")
+print (f"runtime: {runtime3} seconds")

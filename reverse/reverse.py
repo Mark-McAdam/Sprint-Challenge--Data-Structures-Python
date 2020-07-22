@@ -47,7 +47,7 @@ class LinkedList:
     
         # Recursive version
         
-        # case 3 
+        # case 1    
         # node is none, basically tail node will
         # pass none as the next node because its the end
         # start with how the recursive function will end 
